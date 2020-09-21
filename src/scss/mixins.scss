@@ -1,0 +1,32 @@
+@mixin center-f {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-a {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin placeholder {
+  &:placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin media-max($w) {
+  @media (max-width: $w) {
+    @content;
+  }
+}
